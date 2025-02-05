@@ -1,8 +1,9 @@
+import Hero from "@/components/lading-page/Hero";
 
 export default function Home() {
   return (
-    <div className="">
-      Empity Page
+    <div>
+      <Hero />
     </div>
   );
 }
