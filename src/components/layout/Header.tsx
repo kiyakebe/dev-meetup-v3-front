@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <header id="Home" className={`sticky-header bg-white py-3`}>
-      <div className="lg:container mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-[1440px] bg-slate-800 rounded-[20rem]">
+      <div className="lg:container mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-[1440px] bg-slate-800 rounded-[2rem]">
         <div className="flex justify-between items-center py-4 p-6 md:space-x-10 md:px-5">
           <div className="flex justify-start">
             <a
@@ -76,7 +76,7 @@ const Header = () => {
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
             <Link href="/login">
-              <button className="w-full bg-amber-500 hover:bg-ammber-600 text-white font-semibold py-2 px-4 rounded-lg">
+              <button className="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg">
                 Signup Now
               </button>
             </Link>
