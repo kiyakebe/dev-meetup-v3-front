@@ -37,18 +37,18 @@ const Header = () => {
             </Button>
           </div>
 
-          <nav className="hidden md:flex space-x-5 lg:space-x-10">
+          <nav className="hidden md:flex space-x-5">
             {navigationLinks.map((link, index) => (
               <Link
                 key={index}
                 href={link.href}
-                className="cursor-pointer text-slate-200"
+                className="cursor-pointer text-slate-200 bg-slate-700 py-2 px-5 rounded-xl"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
-          
+
           <Link
             href="/signup"
             className="hidden md:flex items-center transition-all duration-300"
