@@ -1,12 +1,51 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "../ui/card";
+
+const HeroSlider = () => {
+  return (
+    <Carousel
+      opts={{
+        align: "center",
+        loop: true,
+      }}
+      orientation="vertical"
+      className="w-full max-w-xs h-[600px]"
+    >
+      <CarouselContent className="-mt-1 h-[600px] w-full">
+        {Array.from({ length: 5 }).map((_, index) => (
+          <CarouselItem
+            key={index}
+            className="pt-1 md:pt-1.5 h-1/3 md:basis-1/2 lg:basis-1/2 pb-5"
+          >
+            <div className="p-1 h-full">
+              <Card className="h-full">
+                <CardContent className="flex items-center justify-center p-6 h-full">
+                  <span className="text-4xl font-semibold">{index + 1}</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
+  );
+};
 
 const Hero = () => {
   return (
-    <section className="min-h-[87vh] py-3 overflow-x-hidden relative">
-      <div className="min-h-[85vh] mx-auto flex items-center px-4 sm:px-6 lg:px-8 md:py-24 md:lg:py-24 lg:max-w-[1440px] bg-slate-800 rounded-[2rem]">
-        <div className="flex flex-col gap-x-10 md:flex-row">
-          <div className=" md:w-1/2 p-6 grid place-items-center">
+    <section className="min-h-[87vh] bg-slate-800 py-3 overflow-x-hidden relative">
+      <div className="min-h-[85vh] mx-auto flex items-stretch px-4 sm:px-6 lg:px-8 lg:max-w-[1440px]">
+        <div className="flex flex-col w-full gap-x-10 md:flex-row">
+          <div className="md:w-1/2 p-6 grid place-items-center">
             <div className="flex flex-col justify-center space-y-6">
               <h1 className="text-2xl md:text-3xl lg:text-7xl font-bold bg-gradient-to-r from-white via-team-50 to-teal-200 bg-clip-text text-transparent">
                 V3 Dev MeetUp
@@ -27,14 +66,15 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="md:w-1/2 grid place-items-center">
-            <Image
+          <div className="md:w-1/2 h-full flex items-center justify-center">
+            {/* <Image
               src="/placeholder.png?height=600&width=600"
               alt="AWW Smm Panel"
               width={600}
               height={400}
               className="rounded-lg"
-            />
+            /> */}
+            <HeroSlider />
           </div>
         </div>
       </div>

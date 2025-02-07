@@ -14,8 +14,8 @@ const Header = () => {
   };
 
   return (
-    <header id="Home" className={`sticky-header bg-white py-3`}>
-      <div className="lg:container mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-[1440px] bg-slate-800 rounded-[2rem]">
+    <header id="Home" className={`sticky-header bg-slate-800 py-3`}>
+      <div className="lg:container mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-[1440px]">
         <div className="flex justify-between items-center py-4 p-6 md:space-x-10 md:px-5">
           <div className="flex justify-start">
             <a
@@ -37,12 +37,13 @@ const Header = () => {
             </Button>
           </div>
 
-          <nav className="hidden md:flex space-x-5">
+          {/* <nav className="hidden md:flex space-x-5 text-slate-200 bg-slate-700  py-2 rounded-3xl"> */}
+          <nav className="hidden md:flex space-x-5 text-slate-200 bg-slate-700 py-2 rounded-3xl shadow-inner">
             {navigationLinks.map((link, index) => (
               <Link
                 key={index}
                 href={link.href}
-                className="cursor-pointer text-slate-200 bg-slate-700 py-2 px-5 rounded-xl"
+                className="cursor-pointer py-2 px-5"
               >
                 {link.label}
               </Link>
