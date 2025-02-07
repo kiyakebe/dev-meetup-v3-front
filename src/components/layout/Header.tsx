@@ -20,7 +20,7 @@ const Header = () => {
           <div className="flex justify-start">
             <a
               href="/"
-              className="md:text-xl lg:text-2xl font-semibold text-slate-200 items-center flex z-40"
+              className="md:text-xl lg:text-2xl font-semibold text-slate-200 items-center flex"
             >
               V3 MeetUp
             </a>
