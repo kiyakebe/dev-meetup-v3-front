@@ -12,6 +12,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { Card, CardContent } from "../ui/card";
 import { Star } from "lucide-react";
 import { CountdownTimer } from "./CountDownTimer";
+import WaitListForm from "./WaitListForm";
 
 const SliderCard = () => {
   return (
@@ -78,7 +79,7 @@ const HeroSlider = () => {
 
 const Hero = () => {
   return (
-    <section className="min-h-[87vh] bg-slate-800 py-3 overflow-x-hidden relative">
+    <section className="min-h-[85vh] bg-slate-800 py-3 overflow-x-hidden relative">
       <div className="min-h-[85vh] mx-auto flex items-stretch px-4 sm:px-6 lg:px-8 lg:max-w-[1440px]">
         <div className="flex flex-col w-full gap-x-10 md:flex-row relative">
           <div
@@ -96,6 +97,7 @@ const Hero = () => {
 
           <div className="md:w-1/2 p-6 grid place-items-center">
             <div className="flex flex-col justify-center space-y-6">
+              <WaitListForm />
               <h1 className="text-2xl md:text-3xl lg:text-7xl font-bold bg-gradient-to-r from-white via-team-50 to-teal-200 bg-clip-text text-transparent">
                 V3 Dev MeetUp
               </h1>
@@ -105,18 +107,7 @@ const Hero = () => {
                 development skills and knowledge.
               </p>
 
-              <div className="">
-                <CountdownTimer />
-              </div>
-
-              {/* <div className="relative space-x-6">
-                <Link
-                  href="/waitlist"
-                  className="bg-gradient-to-r from-teal-600 to-teal-400 text-white inline-block py-4 px-10 rounded-2xl"
-                >
-                  Join Waitlist
-                </Link>
-              </div> */}
+              <CountdownTimer />
             </div>
           </div>
 
