@@ -11,6 +11,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 import { Card, CardContent } from "../ui/card";
+import { Star } from "lucide-react";
 
 const HeroSlider = () => {
   return (
@@ -21,22 +22,24 @@ const HeroSlider = () => {
       }}
       plugins={[
         Autoplay({
-          delay: 5000,
+          delay: 4000,
         }),
       ]}
       orientation="vertical"
-      className="w-full max-w-xs h-[600px]"
+      className="w-full max-w-xs h-[calc(100vh-80px)]"
     >
-      <CarouselContent className="-mt-1 h-[600px] w-full">
+      <CarouselContent className="-mt-1 h-[calc(100vh-80px)] w-full">
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem
             key={index}
             className="pt-1 md:pt-1.5 h-1/3 md:basis-1/2 lg:basis-1/2 pb-5"
           >
             <div className="p-1 h-full">
-              <Card className="h-full">
+              <Card className="h-full bg-transparent border-0 backdrop-blur-3xl">
                 <CardContent className="flex items-center justify-center p-6 h-full">
-                  <span className="text-4xl font-semibold">{index + 1}</span>
+                  {/* <span className="text-4xl font-semibold">{index + 1}</span> */}
+                  <Star className="text-amber-500" />
+                  <h1 className="text-white text-2xl">Meet Top Developers</h1>
                 </CardContent>
               </Card>
             </div>
@@ -76,7 +79,7 @@ const Hero = () => {
           <div className="md:w-1/2 h-full flex items-center justify-center relative">
             <div
               aria-hidden="true"
-              className="absolute inset-x-0 -top-40 -z-1 transform-gpu overflow-hidden blur-3xl sm:top-20"
+              className="absolute inset-x-0 -top-16 -z-1 transform-gpu overflow-hidden blur-3xl -right-96 sm:-top-20"
             >
               <div
                 style={{
@@ -86,7 +89,7 @@ const Hero = () => {
                 className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#9780ff] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
               />
             </div>
-            
+
             <HeroSlider />
           </div>
         </div>
